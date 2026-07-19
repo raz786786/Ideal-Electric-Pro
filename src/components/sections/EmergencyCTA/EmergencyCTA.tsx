@@ -1,0 +1,42 @@
+import Link from 'next/link';
+import { AlertTriangle, Phone, ArrowRight } from 'lucide-react';
+import { siteConfig } from '@/data/siteConfig';
+import AnimatedSection from '@/components/shared/AnimatedSection/AnimatedSection';
+import styles from './EmergencyCTA.module.css';
+
+export default function EmergencyCTA() {
+  return (
+    <section className={styles.section} id="emergency-cta">
+      <div className={styles.container}>
+        <AnimatedSection direction="left">
+          <div className={styles.content}>
+            <span className={styles.icon} style={{ display: 'inline-flex', color: 'hsl(0, 72%, 58%)' }}>
+              <AlertTriangle size={36} fill="currentColor" style={{ color: 'white' }} />
+            </span>
+            <h2 className={styles.title}>Electrical Emergency? We&apos;re Here 24/7</h2>
+            <p className={styles.description}>
+              Don&apos;t wait when safety is at stake. Our emergency electricians are available 
+              around the clock in Astoria, Queens, and all of NYC.
+            </p>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection direction="right">
+          <div className={styles.ctas}>
+            <a
+              href={`tel:${siteConfig.phoneRaw}`}
+              className={styles.ctaCall}
+              id="emergency-call-btn"
+            >
+              <Phone size={18} fill="currentColor" style={{ marginRight: '6px' }} />
+              Call Now: {siteConfig.phone}
+            </a>
+            <Link href="/contact" className={styles.ctaEstimate} id="emergency-estimate-btn">
+              Get Free Estimate
+              <ArrowRight size={16} style={{ marginLeft: '6px' }} />
+            </Link>
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+  );
+}

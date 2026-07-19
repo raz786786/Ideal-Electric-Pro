@@ -1,0 +1,106 @@
+.section {
+  padding: clamp(3rem, 5vw, 6rem) 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.overline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.6875rem, 0.65rem + 0.15vw, 0.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(38, 95%, 54%);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 1.75rem + 1.25vw, 2.5rem);
+  font-weight: 700;
+  color: hsl(210, 15%, 95%);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  background: hsl(220, 22%, 14%);
+  border: 1px solid hsla(215, 20%, 40%, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.item:hover {
+  border-color: hsla(217, 91%, 55%, 0.2);
+}
+
+.question {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  color: hsl(210, 15%, 95%);
+  font-family: var(--font-heading);
+  font-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1.0625rem);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.2s ease;
+}
+
+.question:hover {
+  color: hsl(38, 95%, 54%);
+}
+
+.icon {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  color: hsl(217, 91%, 55%);
+}
+
+.iconOpen {
+  transform: rotate(45deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.3s ease;
+}
+
+.answerOpen {
+  max-height: 300px;
+}
+
+.answerContent {
+  padding: 0 1.5rem 1.25rem;
+  font-size: clamp(0.8125rem, 0.78rem + 0.15vw, 0.9375rem);
+  color: hsl(215, 12%, 72%);
+  line-height: 1.7;
+}

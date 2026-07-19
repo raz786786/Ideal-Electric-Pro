@@ -1,0 +1,89 @@
+.wrapper {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 3rem + 3vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, hsl(217, 91%, 55%), hsl(38, 100%, 54%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 1.15rem + 0.4vw, 1.75rem);
+  font-weight: 700;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 0.9375rem;
+  color: hsl(215, 12%, 72%);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ctas {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(38, 100%, 54%), hsl(30, 100%, 48%));
+  color: hsl(220, 30%, 8%);
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px hsla(38, 100%, 54%, 0.3);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: hsl(210, 15%, 95%);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  border: 2px solid hsla(217, 91%, 55%, 0.5);
+  transition: all 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background: hsla(217, 91%, 55%, 0.15);
+  border-color: hsl(217, 91%, 55%);
+}

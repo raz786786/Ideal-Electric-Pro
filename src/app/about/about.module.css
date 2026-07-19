@@ -1,0 +1,237 @@
+.hero {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 8rem 1.5rem 4rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, hsla(220, 30%, 6%, 0.85), hsla(220, 25%, 10%, 0.95));
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 1.75rem + 1.5vw, 3.5rem);
+  font-weight: 800;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  color: hsl(215, 12%, 72%);
+  line-height: 1.6;
+}
+
+.storySection {
+  padding: clamp(3rem, 5vw, 6rem) 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.overline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.6875rem, 0.65rem + 0.15vw, 0.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(38, 95%, 54%);
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.5rem);
+  font-weight: 700;
+  color: hsl(210, 15%, 95%);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: hsl(215, 12%, 72%);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.storyImgWrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid hsla(215, 20%, 40%, 0.15);
+}
+
+.storyImg {
+  object-fit: cover;
+}
+
+.valuesSection {
+  padding: clamp(3rem, 5vw, 6rem) 0;
+  background: hsl(220, 30%, 6%);
+}
+
+.valuesHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.valueCard {
+  background: hsl(220, 22%, 14%);
+  border: 1px solid hsla(215, 20%, 40%, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  border-color: hsla(217, 91%, 55%, 0.3);
+  transform: translateY(-4px);
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.valueTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 0.75rem;
+}
+
+.valueDesc {
+  font-size: 0.9375rem;
+  color: hsl(215, 12%, 72%);
+  line-height: 1.6;
+}
+
+.teamSection {
+  padding: clamp(3rem, 5vw, 6rem) 0;
+}
+
+.teamHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.teamSubtitle {
+  font-size: 1rem;
+  color: hsl(215, 12%, 72%);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.teamCard {
+  background: hsl(220, 22%, 14%);
+  border: 1px solid hsla(215, 20%, 40%, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.teamImgWrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 3px solid hsl(217, 91%, 48%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamAvatarPlaceholder {
+  font-size: 3rem;
+  color: hsl(217, 91%, 55%);
+}
+
+.teamName {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 0.25rem;
+}
+
+.teamRole {
+  display: block;
+  font-size: 0.875rem;
+  color: hsl(38, 95%, 54%);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.teamBio {
+  font-size: 0.9375rem;
+  color: hsl(215, 12%, 72%);
+  line-height: 1.6;
+}
+
+@media (max-width: 1023px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .storyContent {
+    order: 2;
+  }
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}

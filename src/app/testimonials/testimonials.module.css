@@ -1,0 +1,138 @@
+.hero {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/images/hero/hero-services.jpg);
+  text-align: center;
+  padding: 8rem 1.5rem 4rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, hsla(220, 30%, 6%, 0.85), hsla(220, 25%, 10%, 0.95));
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 1.75rem + 1.5vw, 3.5rem);
+  font-weight: 800;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  color: hsl(215, 12%, 72%);
+  line-height: 1.6;
+}
+
+.reviewsSection {
+  padding: clamp(3rem, 5vw, 6rem) 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: hsl(220, 22%, 14%);
+  border: 1px solid hsla(215, 20%, 40%, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 3rem;
+  opacity: 0.1;
+  color: hsl(217, 91%, 55%);
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.star {
+  color: hsl(38, 95%, 54%);
+  font-size: 1.25rem;
+}
+
+.quote {
+  font-size: 0.9375rem;
+  color: hsl(215, 12%, 72%);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+  background: hsla(217, 91%, 55%, 0.3);
+  margin-bottom: 1rem;
+}
+
+.author {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 0.25rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: hsl(215, 10%, 52%);
+  flex-wrap: wrap;
+}
+
+.location {
+  color: hsl(215, 10%, 52%);
+}
+
+.service {
+  color: hsl(217, 89%, 55%);
+  font-weight: 500;
+}
+
+.dot {
+  color: hsl(215, 8%, 38%);
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

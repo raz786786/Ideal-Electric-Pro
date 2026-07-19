@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Modern CSS Reset — Ideal Electric Pros Inc
+   Opinionated reset for consistent cross-browser rendering.
+   ========================================================================== */
+
+/* Box sizing for everything */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin & padding */
+*  {
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font-size inflation on mobile */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: var(--leading-normal, 1.5);
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Headings — wrap text by default */
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+/* Paragraphs — wrap text by default */
+p {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Links — remove default underline */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make images, pictures, videos, SVGs responsive by default */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Images should preserve aspect ratio */
+img {
+  height: auto;
+}
+
+/* Inherit fonts for form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Reset button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: inherit;
+}
+
+/* Textarea — only vertical resize */
+textarea {
+  resize: vertical;
+}
+
+/* Remove default fieldset appearance */
+fieldset {
+  border: none;
+}
+
+/* Table — collapse borders */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default summary marker */
+summary {
+  cursor: pointer;
+}
+
+/* Remove default dialog styles */
+dialog {
+  padding: 0;
+}
+
+/* Target anchor scrolling offset */
+:target {
+  scroll-margin-block: var(--header-height, 80px);
+}
+
+/* Focus styles — accessible keyboard focus indicators */
+:focus-visible {
+  outline: 2px solid var(--primary-400, hsl(217, 91%, 56%));
+  outline-offset: 2px;
+}
+
+/* Remove animations, transitions and smooth scroll for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

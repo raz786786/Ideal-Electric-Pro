@@ -1,0 +1,38 @@
+.hero {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 8rem 1.5rem 4rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, hsla(220, 30%, 6%, 0.85), hsla(220, 25%, 10%, 0.95));
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 1.75rem + 1.5vw, 3.5rem);
+  font-weight: 800;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  color: hsl(215, 12%, 72%);
+  line-height: 1.6;
+}

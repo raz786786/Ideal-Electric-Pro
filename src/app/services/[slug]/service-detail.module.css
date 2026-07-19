@@ -1,0 +1,314 @@
+.hero {
+  position: relative;
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/images/hero/hero-services.jpg);
+  padding: 8rem 1.5rem 3rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, hsla(220, 30%, 6%, 0.85), hsla(220, 25%, 10%, 0.95));
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(215, 10%, 52%);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumbLink {
+  color: hsl(215, 12%, 72%);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  color: hsl(38, 95%, 54%);
+}
+
+.separator {
+  color: hsl(215, 8%, 38%);
+}
+
+.current {
+  color: hsl(210, 15%, 95%);
+  font-weight: 500;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+  font-weight: 800;
+  color: hsl(210, 15%, 95%);
+  line-height: 1.2;
+}
+
+.contentSection {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid hsla(215, 20%, 40%, 0.15);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.sectionHeading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 1.3rem + 0.6vw, 2rem);
+  font-weight: 700;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: hsl(215, 12%, 72%);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.subHeading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  font-weight: 600;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 1rem;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: hsl(215, 12%, 72%);
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: hsl(152, 69%, 48%);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.ctaBox {
+  background: hsl(220, 22%, 14%);
+  border: 1px solid hsla(215, 20%, 40%, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ctaBox h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 0.5rem;
+}
+
+.ctaBox p {
+  font-size: 0.9375rem;
+  color: hsl(215, 12%, 72%);
+  margin-bottom: 1.5rem;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(38, 100%, 54%), hsl(30, 100%, 48%));
+  color: hsl(220, 30%, 8%);
+  font-weight: 700;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px hsla(38, 100%, 54%, 0.3);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: hsl(210, 15%, 95%);
+  font-weight: 600;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  border: 2px solid hsla(217, 91%, 55%, 0.5);
+  transition: all 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background: hsla(217, 91%, 55%, 0.15);
+  border-color: hsl(217, 91%, 55%);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebarWidget {
+  background: hsl(220, 22%, 14%);
+  border: 1px solid hsla(215, 20%, 40%, 0.15);
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+
+.widgetTitle {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid hsla(215, 20%, 40%, 0.1);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebarLink {
+  color: hsl(215, 12%, 72%);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0;
+}
+
+.sidebarLink:hover {
+  color: hsl(38, 95%, 54%);
+  padding-left: 4px;
+}
+
+.arrow {
+  font-weight: bold;
+}
+
+.widgetBanner {
+  background: linear-gradient(135deg, hsl(217, 95%, 15%) 0%, hsl(220, 30%, 6%) 100%);
+  border-color: hsla(217, 91%, 55%, 0.25);
+  text-align: center;
+}
+
+.widgetBanner h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: hsl(210, 15%, 95%);
+  margin-bottom: 0.75rem;
+}
+
+.widgetBanner p {
+  font-size: 0.875rem;
+  color: hsl(215, 12%, 72%);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.bannerPhone {
+  display: inline-block;
+  background: hsl(217, 91%, 48%);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.bannerPhone:hover {
+  background: hsl(217, 91%, 55%);
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .sidebar {
+    order: 2;
+  }
+}
+
+@media (max-width: 639px) {
+  .featuresList {
+    grid-template-columns: 1fr;
+  }
+}
