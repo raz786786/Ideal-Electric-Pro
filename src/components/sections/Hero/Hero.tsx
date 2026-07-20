@@ -28,10 +28,10 @@ export default function Hero() {
             Available 24/7 for emergencies. Licensed, insured, and committed to excellence.
           </p>
           <div className={styles.ctas}>
-            <Link href="/contact" className={styles.ctaPrimary} id="hero-cta-estimate">
+            <a href={`tel:${siteConfig.phoneRaw}`} className={styles.ctaPrimary} id="hero-cta-estimate">
               Get Free Estimate
               <Zap size={16} fill="currentColor" style={{ marginLeft: '6px' }} />
-            </Link>
+            </a>
             <a href={`tel:${siteConfig.phoneRaw}`} className={styles.ctaSecondary} id="hero-cta-call">
               <Phone size={16} fill="currentColor" style={{ marginRight: '6px' }} />
               Call Now: {siteConfig.phone}

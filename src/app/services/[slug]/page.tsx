@@ -111,9 +111,11 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <h3>Ready to Start Your Project?</h3>
                 <p>Contact Astoria&apos;s leading electricians today for a free estimate or to schedule your service.</p>
                 <div className={styles.ctaButtons}>
-                  <Link href="/contact" className={styles.btnPrimary} id="detail-cta-estimate">Get Free Estimate</Link>
-                  <a href="tel:+13478969289" className={styles.btnSecondary} id="detail-cta-call">
+                  <a href="tel:+13478969289" className={styles.btnPrimary} id="detail-cta-estimate">
                     <Phone size={14} fill="currentColor" style={{ marginRight: '6px' }} />
+                    Call for Free Estimate
+                  </a>
+                  <a href="tel:+13478969289" className={styles.btnSecondary} id="detail-cta-call">
                     Call Now
                   </a>
                 </div>

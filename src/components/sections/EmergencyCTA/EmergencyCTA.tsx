@@ -30,10 +30,10 @@ export default function EmergencyCTA() {
               <Phone size={18} fill="currentColor" style={{ marginRight: '6px' }} />
               Call Now: {siteConfig.phone}
             </a>
-            <Link href="/contact" className={styles.ctaEstimate} id="emergency-estimate-btn">
-              Get Free Estimate
-              <ArrowRight size={16} style={{ marginLeft: '6px' }} />
-            </Link>
+            <a href={`tel:${siteConfig.phoneRaw}`} className={styles.ctaEstimate} id="emergency-estimate-btn">
+              Call for Estimate
+              <Phone size={16} fill="currentColor" style={{ marginLeft: '6px' }} />
+            </a>
           </div>
         </AnimatedSection>
       </div>

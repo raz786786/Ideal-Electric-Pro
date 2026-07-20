@@ -108,7 +108,7 @@ export default function ContactPage() {
 
               <div className={styles.mapCard}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0911579737976!2d-73.91437432342551!3d40.768600071385415!2m3!1f0!2f0!3f0!2m1!1f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25f463be4ea29%3A0x6b8d0c6fa4d033db!2s25-78%20Steinway%20St%2C%20Astoria%2C%20NY%2011103!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                  src="https://maps.google.com/maps?q=25-78%20Steinway%20St,%20Astoria,%20NY%2011103&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
