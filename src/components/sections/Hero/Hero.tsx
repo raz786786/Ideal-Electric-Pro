@@ -24,8 +24,7 @@ export default function Hero() {
             in Queens, NYC
           </h1>
           <p className={styles.subtitle}>
-            Professional residential and commercial electrical services in Astoria, Queens, and all of NYC. 
-            Available 24/7 for emergencies. Licensed, insured, and committed to excellence.
+            Licensed &amp; Insured Residential &amp; Commercial Electrical Services in Astoria, Queens &amp; NYC. 24/7 Rapid Emergency Response.
           </p>
           <div className={styles.ctas}>
             <a href={`tel:${siteConfig.phoneRaw}`} className={styles.ctaPrimary} id="hero-cta-estimate">

@@ -52,18 +52,10 @@ export default function AboutPage() {
                 </span>
                 <h2 className={styles.sectionTitle}>Providing Trusted Service to Astoria & Queens</h2>
                 <p className={styles.paragraph}>
-                  Ideal Electric Pros Inc was founded in 2011 by James Harrison with a simple mission: 
-                  to deliver honest, high-quality, and secure electrical work to families and business owners 
-                  in Astoria and the broader Queens area.
+                  Founded in 2011, Ideal Electric Pros Inc delivers honest, high-grade electrical services to homes and businesses across Astoria and Queens.
                 </p>
                 <p className={styles.paragraph}>
-                  What began as a one-man local operation has grown into a team of certified master electricians 
-                  and technicians. We specialize in residential panel upgrades, commercial construction builds, 
-                  smart home systems, and EV charger installations.
-                </p>
-                <p className={styles.paragraph}>
-                  We believe in upfront pricing, rigorous safety protocols, and a commitment to customer service 
-                  that treats every home like our own. All our work is backed by a 100% satisfaction guarantee.
+                  Our master electricians specialize in 200A panel upgrades, commercial build-outs, EV charging stations, smart automation, and 24/7 emergency response.
                 </p>
               </div>
             </AnimatedSection>

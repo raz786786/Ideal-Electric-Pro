@@ -6,32 +6,32 @@ const reasons = [
   {
     icon: ShieldCheck,
     title: 'Licensed & Insured',
-    description: 'Fully licensed NYC electricians with comprehensive insurance coverage. Your property and safety are always protected.',
+    description: 'Fully licensed NYC Master Electricians with comprehensive liability insurance.',
   },
   {
     icon: Clock,
     title: '24/7 Emergency Service',
-    description: 'Electrical emergencies don\'t wait. Our team is available around the clock to handle urgent electrical issues in Astoria and Queens.',
+    description: 'Rapid 24/7 emergency electrical dispatch across Astoria, Queens, and NYC.',
   },
   {
     icon: DollarSign,
     title: 'Upfront Pricing',
-    description: 'No hidden fees or surprise charges. We provide detailed, transparent estimates before any work begins.',
+    description: 'Transparent, fixed upfront estimates with zero hidden fees or surprises.',
   },
   {
     icon: Zap,
     title: 'Expert Technicians',
-    description: 'Our master electricians bring 15+ years of experience to every job, from simple repairs to complex installations.',
+    description: '15+ years of certified experience in residential & commercial projects.',
   },
   {
     icon: CheckCircle2,
     title: 'Satisfaction Guaranteed',
-    description: 'We stand behind every project with a 100% satisfaction guarantee. If you\'re not happy, we\'ll make it right.',
+    description: '100% workmanship satisfaction guarantee on every electrical project.',
   },
   {
     icon: Award,
     title: 'Top-Rated Service',
-    description: 'Consistently rated 5 stars by our customers across Google, Yelp, and HomeAdvisor. Excellence is our standard.',
+    description: 'Top 5-star customer ratings across Google, Yelp, and local reviews.',
   },
 ];
 

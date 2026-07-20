@@ -15,8 +15,7 @@ export default function EmergencyCTA() {
             </span>
             <h2 className={styles.title}>Electrical Emergency? We&apos;re Here 24/7</h2>
             <p className={styles.description}>
-              Don&apos;t wait when safety is at stake. Our emergency electricians are available 
-              around the clock in Astoria, Queens, and all of NYC.
+              Immediate 24/7 electrician dispatch for power outages, shorts, and hazards in Astoria &amp; Queens.
             </p>
           </div>
         </AnimatedSection>
