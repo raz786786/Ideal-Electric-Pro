@@ -2,19 +2,17 @@
 
 import { useCountUp } from '@/hooks/useCountUp';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import { Zap, Users, Award, Star } from 'lucide-react';
 import AnimatedSection from '@/components/shared/AnimatedSection/AnimatedSection';
 import styles from './StatsCounter.module.css';
 
 const stats = [
-  { icon: Zap, number: 1500, suffix: '+', label: 'Projects Completed' },
-  { icon: Users, number: 980, suffix: '+', label: 'Happy Customers' },
-  { icon: Award, number: 15, suffix: '+', label: 'Years Experience' },
-  { icon: Star, number: 4.9, suffix: '★', label: 'Average Rating', isDecimal: true },
+  { number: 1500, suffix: '+', label: 'Projects Completed' },
+  { number: 980, suffix: '+', label: 'Happy Customers' },
+  { number: 15, suffix: '+', label: 'Years Experience' },
+  { number: 4.9, suffix: '★', label: 'Average Rating', isDecimal: true },
 ];
 
-function StatItem({ icon: Icon, number, suffix, label, isDecimal, trigger, delay }: {
-  icon: React.ComponentType<any>;
+function StatItem({ number, suffix, label, isDecimal, trigger, delay }: {
   number: number;
   suffix: string;
   label: string;
@@ -28,9 +26,6 @@ function StatItem({ icon: Icon, number, suffix, label, isDecimal, trigger, delay
   return (
     <AnimatedSection delay={delay}>
       <div className={styles.stat}>
-        <span className={styles.statIcon} style={{ display: 'inline-flex', justifyContent: 'center', color: 'var(--color-primary-400)', marginBottom: '12px' }}>
-          <Icon size={32} />
-        </span>
         <div className={styles.statNumber}>
           {display}{suffix}
         </div>
@@ -46,15 +41,6 @@ export default function StatsCounter() {
   return (
     <section className={styles.section} id="stats" ref={ref}>
       <div className={styles.container}>
-        <AnimatedSection>
-          <div className={styles.header}>
-            <div className={styles.overline}>
-              <Zap size={14} fill="currentColor" />
-              By The Numbers
-            </div>
-            <h2 className={styles.title}>Trusted by Thousands Across NYC</h2>
-          </div>
-        </AnimatedSection>
         <div className={styles.grid}>
           {stats.map((stat, index) => (
             <StatItem

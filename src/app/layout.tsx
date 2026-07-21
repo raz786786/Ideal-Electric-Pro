@@ -55,9 +55,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--color-bg-dark)', color: 'var(--color-text-secondary)', margin: 0 }}>
+      <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--bg-page)', color: 'var(--text-secondary)', margin: 0 }}>
         <SchemaMarkup />
         <Header />
         <main style={{ flexGrow: 1 }}>{children}</main>

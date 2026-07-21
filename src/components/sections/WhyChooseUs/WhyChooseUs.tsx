@@ -41,28 +41,28 @@ export default function WhyChooseUs() {
       <div className={styles.container}>
         <AnimatedSection>
           <div className={styles.header}>
-            <div className={styles.overline}>
-              <Star size={14} fill="currentColor" />
-              Why Choose Us
-            </div>
-            <h2 className={styles.title}>The Ideal Electric Pros Difference</h2>
+            <div className={styles.overline}>Why Choose Ideal Electric Pros</div>
+            <h2 className={styles.title}>The Standard of Excellence in NYC</h2>
             <p className={styles.subtitle}>
-              Here&apos;s why homeowners and businesses across Queens trust us 
-              with their electrical needs.
+              We are a team of licensed master electricians dedicated to providing safe, reliable, and high-quality electrical services.
             </p>
           </div>
         </AnimatedSection>
-        <div className={styles.grid}>
+        <div className={styles.list}>
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
+            const formattedIndex = String(index + 1).padStart(2, '0');
             return (
               <AnimatedSection key={reason.title} delay={index * 100}>
-                <div className={styles.card}>
-                  <div className={styles.cardIcon}>
-                    <Icon size={24} />
+                <div className={styles.listItem}>
+                  <div className={styles.itemNumber}>{formattedIndex}</div>
+                  <div className={styles.itemContent}>
+                    <h3 className={styles.itemTitle}>{reason.title}</h3>
+                    <p className={styles.itemDescription}>{reason.description}</p>
                   </div>
-                  <h3 className={styles.cardTitle}>{reason.title}</h3>
-                  <p className={styles.cardDescription}>{reason.description}</p>
+                  <div className={styles.itemIcon}>
+                    <Icon size={32} strokeWidth={1} />
+                  </div>
                 </div>
               </AnimatedSection>
             );

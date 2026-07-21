@@ -4,6 +4,11 @@
    ========================================================================== */
 
 /* -----------------------------------------------------------------------
+   Import Google Fonts
+   ----------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* -----------------------------------------------------------------------
    Import design system partials (order matters)
    ----------------------------------------------------------------------- */
 @import '../styles/variables.css';
@@ -16,19 +21,19 @@
    HTML — Smooth scroll and color scheme
    ----------------------------------------------------------------------- */
 html {
-  color-scheme: dark;
+  color-scheme: light;
   scroll-behavior: smooth;
   height: 100%;
 }
 
 /* -----------------------------------------------------------------------
-   BODY — Dark theme defaults
+   BODY — Light theme defaults
    ----------------------------------------------------------------------- */
 body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-page);
   color: var(--text-secondary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;

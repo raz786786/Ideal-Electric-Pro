@@ -1,123 +1,98 @@
 .section {
-  padding: clamp(2.5rem, 4vw, 4rem) 0;
-  background: linear-gradient(135deg, hsl(0, 65%, 18%) 0%, hsl(0, 50%, 12%) 100%);
+  padding: clamp(4rem, 8vw, 8rem) 0;
   position: relative;
-  overflow: hidden;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, hsla(0, 72%, 58%, 0.1) 0%, transparent 60%);
+  background: var(--bg-page);
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 3rem);
-  position: relative;
-  z-index: 1;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+}
+
+.wrapper {
+  background: linear-gradient(135deg, var(--error) 0%, #C2410C 100%);
+  color: var(--text-inverse);
+  padding: clamp(4rem, 8vw, 6rem);
+  border-radius: var(--radius-2xl);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
+  text-align: center;
+  box-shadow: 0 20px 40px -10px rgba(234, 88, 12, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .content {
-  flex: 1;
-  min-width: 280px;
-}
-
-.icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-  display: block;
-  animation: electricPulseIcon 2s ease infinite;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
-  font-weight: 700;
-  color: hsl(210, 15%, 95%);
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .description {
-  font-size: clamp(0.875rem, 0.85rem + 0.1vw, 1rem);
-  color: hsla(210, 15%, 95%, 0.7);
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
   line-height: 1.6;
+  opacity: 0.95;
+  font-weight: 500;
 }
 
-.ctas {
+.action {
   display: flex;
-  gap: 1rem;
-  flex-shrink: 0;
-  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .ctaCall {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, hsl(0, 72%, 58%), hsl(0, 72%, 45%));
-  color: white;
-  font-weight: 700;
-  font-size: clamp(0.875rem, 0.85rem + 0.1vw, 1rem);
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  border: none;
+  gap: 12px;
+  background: var(--bg-card);
+  color: var(--error);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding: 1.25rem 3rem;
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 12px hsla(0, 72%, 58%, 0.2);
+  border-radius: var(--radius-full);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .ctaCall:hover {
-  transform: scale(1.03) translateY(-2px);
-  box-shadow: 0 6px 16px hsla(0, 72%, 58%, 0.3);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  color: #C2410C;
 }
 
-.ctaEstimate {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  color: hsl(210, 15%, 95%);
-  font-weight: 600;
-  font-size: clamp(0.875rem, 0.85rem + 0.1vw, 1rem);
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  border: 2px solid hsla(210, 15%, 95%, 0.3);
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.ctaEstimate:hover {
-  background: hsla(210, 15%, 95%, 0.1);
-  border-color: hsla(210, 15%, 95%, 0.5);
-}
-
-@keyframes electricPulseIcon {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
+@media (max-width: 639px) {
+  .wrapper {
+    padding: 3rem 1.5rem;
   }
-  .ctas {
-    width: 100%;
-    flex-direction: column;
-  }
-  .ctaCall,
-  .ctaEstimate {
+  .ctaCall {
     width: 100%;
     justify-content: center;
   }

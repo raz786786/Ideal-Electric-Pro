@@ -42,14 +42,10 @@ export default function ServicesGrid({ limit, showViewAll = true }: ServicesGrid
       <div className={styles.container}>
         <AnimatedSection>
           <div className={styles.header}>
-            <div className={styles.overline}>
-              <Zap size={14} fill="currentColor" />
-              What We Do
-            </div>
-            <h2 className={styles.title}>Our Professional Electrical Services</h2>
+            <div className={styles.overline}>Professional Services</div>
+            <h2 className={styles.title}>Comprehensive Electrical Solutions</h2>
             <p className={styles.subtitle}>
-              From simple repairs to complex installations, our licensed electricians 
-              deliver top-quality electrical services across Astoria, Queens, and NYC.
+              From simple repairs to complex commercial installations, our licensed electricians have the expertise to get the job done right.
             </p>
           </div>
         </AnimatedSection>
@@ -57,6 +53,7 @@ export default function ServicesGrid({ limit, showViewAll = true }: ServicesGrid
         <div className={styles.grid}>
           {displayServices.map((service, index) => {
             const IconComponent = iconMap[service.icon] || Zap;
+            const formattedIndex = String(index + 1).padStart(2, '0');
             return (
               <AnimatedSection key={service.id} delay={index * 100}>
                 <Link
@@ -64,15 +61,17 @@ export default function ServicesGrid({ limit, showViewAll = true }: ServicesGrid
                   className={styles.card}
                   id={`service-card-${service.slug}`}
                 >
-                  <div className={styles.cardIcon}>
-                    <IconComponent size={24} />
+                  <div className={styles.cardTop}>
+                    <span className={styles.cardNumber}>{formattedIndex}</span>
+                    <IconComponent size={24} className={styles.cardIcon} />
                   </div>
-                  <h3 className={styles.cardTitle}>{service.title}</h3>
-                  <p className={styles.cardDescription}>{service.shortDescription}</p>
-                  <span className={styles.cardLink}>
-                    Learn More 
-                    <ArrowRight size={14} className={styles.cardArrow} style={{ marginLeft: '4px' }} />
-                  </span>
+                  <div className={styles.cardBottom}>
+                    <h3 className={styles.cardTitle}>{service.title}</h3>
+                    <p className={styles.cardDescription}>{service.shortDescription}</p>
+                    <div className={styles.cardLink}>
+                      <ArrowRight size={24} className={styles.cardArrow} />
+                    </div>
+                  </div>
                 </Link>
               </AnimatedSection>
             );
