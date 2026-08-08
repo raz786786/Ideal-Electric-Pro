@@ -1,5 +1,5 @@
 /* ============================================
-   Header — Professional Service Navigation
+   Header — Premium Dark Glass Navigation
    ============================================ */
 
 .header {
@@ -7,19 +7,22 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 72px;
+  height: var(--header-height);
   z-index: 1000;
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border-default);
-  transition: all var(--transition-normal);
+  background: rgba(7, 12, 24, 0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.3s var(--ease-out-expo),
+              border-color 0.3s var(--ease-out-expo),
+              box-shadow 0.3s var(--ease-out-expo),
+              backdrop-filter 0.3s var(--ease-out-expo);
 }
 
 .headerScrolled {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid transparent;
-  box-shadow: var(--shadow-sm);
+  background: rgba(7, 12, 24, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px -8px rgba(7, 12, 24, 0.6);
 }
 
 /* ---- Container ---- */
@@ -32,6 +35,7 @@
   justify-content: space-between;
   padding: 0 clamp(1rem, 4vw, 3rem);
   height: 100%;
+  gap: 1.5rem;
 }
 
 /* ---- Logo ---- */
@@ -42,67 +46,84 @@
   text-decoration: none;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--primary-900);
-  gap: 0;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  gap: 0.75rem;
   white-space: nowrap;
+  letter-spacing: -0.02em;
 }
 
-.logo span {
-  color: var(--accent-700);
+.logo > span:last-child {
+  color: var(--accent-400);
 }
 
 .logoIcon {
-  width: 40px;
-  height: 40px;
-  background: var(--accent-700);
+  width: 42px;
+  height: 42px;
+  background: var(--accent-400);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
-  color: var(--text-inverse);
-  font-size: 20px;
+  color: var(--navy-950);
   flex-shrink: 0;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 16px -4px rgba(255, 200, 30, 0.5);
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.logo:hover .logoIcon {
+  transform: rotate(-8deg) scale(1.05);
 }
 
 /* ---- Desktop Navigation ---- */
 
 .nav {
   display: flex;
-  gap: 2.5rem;
+  gap: 2.25rem;
   align-items: center;
 }
 
 .navLink {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   font-family: var(--font-body);
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   position: relative;
   padding: 0.5rem 0;
-  transition: color 0.2s ease;
+  transition: color 0.2s var(--ease-out-expo);
 }
 
-.navLink:hover {
-  color: var(--accent-700);
-}
-
-.navLinkActive {
-  color: var(--accent-700);
-}
-
-.navLinkActive::after {
+.navLink::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--accent-700);
+  background: var(--accent-400);
   border-radius: var(--radius-full);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.navLink:hover {
+  color: #FFFFFF;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.navLinkActive {
+  color: #FFFFFF;
+}
+
+.navLinkActive::after {
+  transform: scaleX(1);
 }
 
 /* ---- Phone CTA ---- */
@@ -110,32 +131,33 @@
 .phoneCta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--accent-700);
-  color: var(--text-inverse);
+  gap: 0.625rem;
+  background: var(--accent-400);
+  color: var(--navy-950);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.9375rem;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: transform 0.25s var(--ease-out-expo),
+              box-shadow 0.25s var(--ease-out-expo),
+              background-color 0.25s var(--ease-out-expo);
   white-space: nowrap;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 16px -4px rgba(255, 200, 30, 0.5);
 }
 
 .phoneCta:hover {
-  background: var(--accent-800);
+  background: var(--accent-300);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 24px -6px rgba(255, 200, 30, 0.6);
 }
 
 .phoneIcon {
   display: flex;
   align-items: center;
-  font-size: 16px;
 }
 
 /* ---- Mobile Toggle (Hamburger) ---- */
@@ -152,12 +174,12 @@
 }
 
 .mobileToggle span {
-  width: 24px;
+  width: 26px;
   height: 2px;
-  background: var(--primary-900);
-  transition: all 0.3s ease;
+  background: #FFFFFF;
+  transition: all 0.3s var(--ease-out-expo);
   display: block;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
 }
 
 .mobileToggleOpen span:nth-child(1) {
@@ -180,53 +202,68 @@
 
 .mobileNavLink {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 600;
-  color: var(--primary-900);
+  color: #FFFFFF;
   text-decoration: none;
-  transition: color 0.2s ease;
+  letter-spacing: -0.02em;
+  transition: color 0.2s var(--ease-out-expo),
+              transform 0.2s var(--ease-out-expo),
+              opacity 0.35s var(--ease-out-expo);
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.mobileMenuOpen .mobileNavLink {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(0.06s + var(--i, 0) * 0.05s);
 }
 
 .mobileNavLink:hover {
-  color: var(--accent-700);
+  color: var(--accent-400);
 }
 
 .mobileNavLinkActive {
-  color: var(--accent-700);
+  color: var(--accent-400);
 }
 
 .mobilePhoneCta {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--accent-700);
-  color: var(--text-inverse);
+  background: var(--accent-400);
+  color: var(--navy-950);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 1.125rem;
-  padding: 14px 28px;
+  padding: 1rem 2rem;
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s var(--ease-out-expo),
+              box-shadow 0.25s var(--ease-out-expo);
   margin-top: 1.5rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 28px -8px rgba(255, 200, 30, 0.6);
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.mobileMenuOpen .mobilePhoneCta {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.35s;
 }
 
 .mobilePhoneCta:hover {
-  background: var(--accent-800);
+  background: var(--accent-300);
+  transform: translateY(-2px);
 }
 
 /* ============================================
    Responsive Breakpoints
    ============================================ */
-
-@media (min-width: 1024px) {
-  .header {
-    height: 80px;
-  }
-}
 
 @media (max-width: 1023px) {
   .nav {
@@ -249,15 +286,27 @@
     width: 100%;
     height: 100vh;
     height: 100dvh;
-    background: var(--bg-card);
+    background: var(--bg-darkest);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.75rem;
     z-index: 999;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.35s var(--ease-out-expo);
+    padding: 2rem;
+  }
+
+  .mobileMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse 60% 40% at 70% 10%, rgba(255, 200, 30, 0.08), transparent 70%);
+    pointer-events: none;
   }
 
   .mobileMenuOpen {

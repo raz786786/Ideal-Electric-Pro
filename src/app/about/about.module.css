@@ -1,44 +1,48 @@
 .hero {
   position: relative;
-  min-height: 40vh;
+  min-height: 46vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
   background-size: cover;
   background-position: center;
-  text-align: center;
-  padding: 8rem 1.5rem 4rem;
+  padding: 10rem clamp(1.5rem, 4vw, 3rem) 5rem;
+  overflow: hidden;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, hsla(220, 30%, 6%, 0.85), hsla(220, 25%, 10%, 0.95));
+  background: linear-gradient(to bottom, rgba(7, 12, 24, 0.82), rgba(7, 12, 24, 0.94));
   z-index: 1;
 }
 
 .heroContent {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 1.75rem + 1.5vw, 3.5rem);
-  font-weight: 800;
-  color: hsl(210, 15%, 95%);
+  font-size: clamp(2.5rem, 2rem + 3vw, 4.25rem);
+  font-weight: 600;
+  color: #FFFFFF;
   margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
 }
 
 .subtitle {
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-  color: hsl(215, 12%, 72%);
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  max-width: 640px;
 }
 
 .storySection {
-  padding: clamp(3rem, 5vw, 6rem) 0;
+  padding: var(--section-padding-y) 0;
 }
 
 .container {
@@ -49,8 +53,8 @@
 
 .storyGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -58,36 +62,38 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: clamp(0.6875rem, 0.65rem + 0.15vw, 0.75rem);
+  font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: hsl(38, 95%, 54%);
-  margin-bottom: 1rem;
+  letter-spacing: 0.16em;
+  color: var(--accent-700);
+  margin-bottom: 1.25rem;
 }
 
 .sectionTitle {
   font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.5rem);
-  font-weight: 700;
-  color: hsl(210, 15%, 95%);
-  line-height: 1.2;
+  font-size: clamp(1.875rem, 1.5rem + 1.2vw, 2.75rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.1;
   margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
 }
 
 .paragraph {
   font-size: 1rem;
-  color: hsl(215, 12%, 72%);
-  line-height: 1.7;
+  color: var(--text-secondary);
+  line-height: 1.75;
   margin-bottom: 1.25rem;
 }
 
 .storyImgWrapper {
   position: relative;
   aspect-ratio: 4/3;
-  border-radius: 16px;
+  border-radius: var(--radius-2xl);
   overflow: hidden;
-  border: 1px solid hsla(215, 20%, 40%, 0.15);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-lg);
 }
 
 .storyImg {
@@ -95,8 +101,10 @@
 }
 
 .valuesSection {
-  padding: clamp(3rem, 5vw, 6rem) 0;
-  background: hsl(220, 30%, 6%);
+  padding: var(--section-padding-y) 0;
+  background: var(--navy-50);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .valuesHeader {
@@ -107,21 +115,24 @@
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .valueCard {
-  background: hsl(220, 22%, 14%);
-  border: 1px solid hsla(215, 20%, 40%, 0.15);
-  border-radius: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
   padding: 2.5rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s var(--ease-out-expo),
+              box-shadow 0.3s var(--ease-out-expo),
+              border-color 0.3s var(--ease-out-expo);
 }
 
 .valueCard:hover {
-  border-color: hsla(217, 91%, 55%, 0.3);
-  transform: translateY(-4px);
+  border-color: var(--navy-300);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .valueIcon {
@@ -134,18 +145,19 @@
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
-  color: hsl(210, 15%, 95%);
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
 }
 
 .valueDesc {
   font-size: 0.9375rem;
-  color: hsl(215, 12%, 72%);
-  line-height: 1.6;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 .teamSection {
-  padding: clamp(3rem, 5vw, 6rem) 0;
+  padding: var(--section-padding-y) 0;
 }
 
 .teamHeader {
@@ -155,24 +167,33 @@
 
 .teamSubtitle {
   font-size: 1rem;
-  color: hsl(215, 12%, 72%);
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .teamGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .teamCard {
-  background: hsl(220, 22%, 14%);
-  border: 1px solid hsla(215, 20%, 40%, 0.15);
-  border-radius: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
   padding: 2.5rem;
   text-align: center;
+  transition: transform 0.3s var(--ease-out-expo),
+              box-shadow 0.3s var(--ease-out-expo),
+              border-color 0.3s var(--ease-out-expo);
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--navy-300);
+  box-shadow: var(--shadow-lg);
 }
 
 .teamImgWrapper {
@@ -181,39 +202,40 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 1.5rem;
-  border: 3px solid hsl(217, 91%, 48%);
+  border: 3px solid var(--navy-900);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--bg-hover);
 }
 
 .teamAvatarPlaceholder {
   font-size: 3rem;
-  color: hsl(217, 91%, 55%);
+  color: var(--primary-600);
 }
 
 .teamName {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
-  color: hsl(210, 15%, 95%);
+  color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
 
 .teamRole {
   display: block;
-  font-size: 0.875rem;
-  color: hsl(38, 95%, 54%);
+  font-size: 0.8125rem;
+  color: var(--accent-700);
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .teamBio {
   font-size: 0.9375rem;
-  color: hsl(215, 12%, 72%);
-  line-height: 1.6;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 @media (max-width: 1023px) {

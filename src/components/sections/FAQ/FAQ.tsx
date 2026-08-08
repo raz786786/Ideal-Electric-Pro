@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { Plus } from 'lucide-react';
 import { faq } from '@/data/faq';
 import AnimatedSection from '@/components/shared/AnimatedSection/AnimatedSection';
 import styles from './FAQ.module.css';
@@ -37,7 +38,7 @@ export default function FAQ() {
                       <span>{item.question}</span>
                     </div>
                     <span className={`${styles.icon} ${openId === item.id ? styles.iconOpen : ''}`}>
-                      +
+                      <Plus size={18} />
                     </span>
                   </button>
                   <div className={`${styles.answer} ${openId === item.id ? styles.answerOpen : ''}`}>

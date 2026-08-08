@@ -68,10 +68,10 @@
    GLASS CARD — Glassmorphism
    ----------------------------------------------------------------------- */
 .glass-card {
-  background: hsla(0, 0%, 100%, 0.03);
-  backdrop-filter: blur(16px) saturate(100%);
-  -webkit-backdrop-filter: blur(16px) saturate(100%);
-  border: var(--border-subtle);
+  background: hsla(255, 255%, 100%, 0.03);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid hsla(220, 20%, 60%, 0.15);
   border-radius: var(--radius-lg);
 }
 

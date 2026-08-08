@@ -1,94 +1,106 @@
 /* ==========================================================================
    Design System Variables — Ideal Electric Pros Inc
-   Vibrant NYC Electrician Theme (High-Energy & Professional)
+   "Trust & Authority" — Ink Navy + Safety Yellow + Warm Paper
+   Editorial, trade-premium aesthetic. Space Grotesk display type.
    ========================================================================== */
 
 :root {
   /* -----------------------------------------------------------------------
-     PRIMARY — Electric Blue (Energetic, Professional, High-Vis)
+     PRIMARY — Electric Blue (Refined Cobalt)
      ----------------------------------------------------------------------- */
-  --primary-50:  #F0F9FF;
-  --primary-100: #E0F2FE;
-  --primary-200: #BAE6FD;
-  --primary-300: #7DD3FC;
-  --primary-400: #38BDF8;
-  --primary-500: #0EA5E9;
-  --primary-600: #0284C7; /* Main Vibrant Blue */
-  --primary-700: #0369A1;
-  --primary-800: #075985;
-  --primary-900: #0C4A6E;
-  --primary-950: #082F49;
+  --primary-50:  #EEF4FF;
+  --primary-100: #DCE7FF;
+  --primary-200: #BFD2FF;
+  --primary-300: #93B4FF;
+  --primary-400: #5F8BFF;
+  --primary-500: #3B64F6;
+  --primary-600: #2A47D8;
+  --primary-700: #2438AE;
+  --primary-800: #22328A;
+  --primary-900: #1F2D6E;
+  --primary-950: #161E45;
 
   /* -----------------------------------------------------------------------
-     ACCENT — High-Vis Yellow / Orange (Safety, Urgency, Action)
+     ACCENT — Safety Yellow (High-visibility, electric energy)
      ----------------------------------------------------------------------- */
-  --accent-50:  #FFFBEB;
-  --accent-100: #FEF3C7;
-  --accent-200: #FDE68A;
-  --accent-300: #FCD34D;
-  --accent-400: #FBBF24;
-  --accent-500: #F59E0B; /* Vibrant Amber/Yellow */
-  --accent-600: #D97706; 
-  --accent-700: #B45309; 
-  --accent-800: #92400E;
-  --accent-900: #78350F;
+  --accent-50:  #FFFBE8;
+  --accent-100: #FFF5C2;
+  --accent-200: #FFEA8A;
+  --accent-300: #FFDB47;
+  --accent-400: #FFC81E; /* Main Safety Yellow */
+  --accent-500: #F0A600;
+  --accent-600: #D07E00;
+  --accent-700: #A85C02;
+  --accent-800: #8B4708;
+  --accent-900: #733B0B;
 
   /* -----------------------------------------------------------------------
-     NEUTRAL / DEEP NAVY (For text and deep backgrounds instead of black)
+     NEUTRAL — Ink Navy (Deep, authoritative darks)
      ----------------------------------------------------------------------- */
-  --navy-50:  #F8FAFC;
-  --navy-100: #F1F5F9;
-  --navy-200: #E2E8F0;
-  --navy-800: #1E293B;
-  --navy-900: #0F172A; /* Deep Navy */
-  --navy-950: #020617;
+  --navy-50:  #F5F7FA;
+  --navy-100: #E9EDF3;
+  --navy-200: #D2D9E5;
+  --navy-300: #AEB9CC;
+  --navy-400: #8491AB;
+  --navy-500: #5D6B88;
+  --navy-600: #45526C;
+  --navy-700: #2E3A52;
+  --navy-800: #16213A;
+  --navy-900: #0D1526; /* Ink */
+  --navy-950: #070C18;
 
   /* -----------------------------------------------------------------------
-     LIGHT SURFACES
+     SURFACES
      ----------------------------------------------------------------------- */
-  --bg-page:     var(--primary-50); /* Vibrant light blue tint */
-  --bg-card:     #FFFFFF; /* White for cards */
-  --bg-hover:    #E0F2FE;
+  --bg-page:     var(--navy-50);   /* Warm paper — #F5F7FA */
+  --bg-card:     #FFFFFF;
+  --bg-hover:    #EEF1F8;
+  --bg-dark:     var(--navy-900);
+  --bg-darkest:  var(--navy-950);
+  --bg-elevated: #FFFFFF;
 
   /* -----------------------------------------------------------------------
      TEXT
      ----------------------------------------------------------------------- */
   --text-primary:   var(--navy-900);
-  --text-secondary: #334155;
-  --text-muted:     #64748B;
+  --text-secondary: #45526C;
+  --text-muted:     #5D6B88;
   --text-inverse:   #FFFFFF;
 
   /* -----------------------------------------------------------------------
      SEMANTIC COLORS & BORDERS
      ----------------------------------------------------------------------- */
   --success: #10B981;
-  --error:   #EA580C; /* Vibrant Orange for CTA/Emergency instead of standard Red */
-  --warning: #F59E0B;
+  --error:   #E11D48;
+  --warning: var(--accent-400);
   --info:    var(--primary-500);
 
-  --border-subtle:  var(--primary-100);
-  --border-default: var(--primary-200);
-  --border-strong:  var(--primary-300);
+  --border-subtle:  var(--navy-100);
+  --border-default: var(--navy-200);
+  --border-strong:  var(--navy-300);
 
   /* -----------------------------------------------------------------------
-     BORDER RADIUS (Modern & Friendly)
+     RADIUS — Architectural (mixed scale for hand-crafted feel)
      ----------------------------------------------------------------------- */
-  --radius-sm:   6px;
+  --radius-sm:   8px;
   --radius-md:   12px;
   --radius-lg:   16px;
-  --radius-xl:   24px;
-  --radius-2xl:  32px;
+  --radius-xl:   20px;
+  --radius-2xl:  28px;
   --radius-full: 9999px;
 
   /* -----------------------------------------------------------------------
-     SHADOWS (Flat Design - Minimal)
+     SHADOWS — Soft, layered depth
      ----------------------------------------------------------------------- */
-  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 2px 4px -1px rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
-  --shadow-lg: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
-  --shadow-xl: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
-  --shadow-glow: none; /* Removed for flat design */
-  
+  --shadow-sm: 0 1px 2px 0 rgba(13, 21, 38, 0.05), 0 1px 1px 0 rgba(13, 21, 38, 0.03);
+  --shadow-md: 0 2px 4px -1px rgba(13, 21, 38, 0.06), 0 8px 16px -6px rgba(13, 21, 38, 0.08);
+  --shadow-lg: 0 4px 8px -2px rgba(13, 21, 38, 0.08), 0 16px 32px -12px rgba(13, 21, 38, 0.12);
+  --shadow-xl: 0 8px 16px -4px rgba(13, 21, 38, 0.10), 0 32px 64px -16px rgba(13, 21, 38, 0.16);
+  --shadow-2xl: 0 16px 32px -8px rgba(13, 21, 38, 0.16), 0 48px 96px -24px rgba(13, 21, 38, 0.22);
+  --shadow-glow: 0 0 0 1px rgba(255, 200, 30, 0.35), 0 8px 24px -8px rgba(255, 200, 30, 0.45);
+  --shadow-glow-primary: 0 0 0 1px rgba(59, 100, 246, 0.30), 0 8px 24px -8px rgba(59, 100, 246, 0.40);
+  --shadow-glow-accent: 0 0 0 1px rgba(255, 200, 30, 0.35), 0 8px 24px -8px rgba(255, 200, 30, 0.45);
+
   /* -----------------------------------------------------------------------
      SPACING — 4px grid
      ----------------------------------------------------------------------- */
@@ -110,15 +122,165 @@
   --space-48:  12rem;    /* 192px */
 
   /* -----------------------------------------------------------------------
-     FONT FAMILIES (Trust & Authority)
+     FONT FAMILIES — Editorial display + clean body + serif accent
      ----------------------------------------------------------------------- */
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', monospace;
 
   /* -----------------------------------------------------------------------
-     TRANSITIONS (Smooth & Energetic)
+     TYPE SCALE
      ----------------------------------------------------------------------- */
-  --transition-fast:   150ms ease-out;
-  --transition-normal: 250ms ease-out;
-  --transition-slow:   350ms ease-out;
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+  --text-6xl:  clamp(3rem, 2.3rem + 2.8vw, 4rem); /* 48-64px */
+  --text-hero: clamp(2.75rem, 1.5rem + 5.5vw, 5.5rem); /* 44-88px */
+
+  /* Leading */
+  --leading-none:    1;
+  --leading-tight:   1.1;
+  --leading-snug:    1.25;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+
+  /* Tracking */
+  --tracking-tighter: -0.045em;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.02em;
+  --tracking-wider:   0.05em;
+  --tracking-widest:  0.14em;
+
+  /* Weights */
+  --fw-light:     300;
+  --fw-normal:    400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+
+  /* -----------------------------------------------------------------------
+     GRADIENTS
+     ----------------------------------------------------------------------- */
+  --gradient-primary: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-700) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-300) 0%, var(--accent-500) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
+
+  /* -----------------------------------------------------------------------
+     SEMANTIC SOLID BUTTON — flips to safety yellow in dark mode
+     ----------------------------------------------------------------------- */
+  --btn-ink-bg: var(--navy-900);
+  --btn-ink-color: #FFFFFF;
+  --btn-ink-hover-bg: var(--navy-800);
+  --btn-ink-hover-color: #FFFFFF;
+
+  /* -----------------------------------------------------------------------
+     TRANSITIONS — Expressive easing (ease-out-expo feel)
+     ----------------------------------------------------------------------- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast:   160ms var(--ease-out-expo);
+  --transition-normal: 280ms var(--ease-out-expo);
+  --transition-slow:   480ms var(--ease-out-expo);
+
+  /* -----------------------------------------------------------------------
+     LAYOUT
+     ----------------------------------------------------------------------- */
+  --container-max-width: 1280px;
+  --section-padding-y: clamp(4.5rem, 9vw, 8rem);
+  --header-height: 76px;
+
+  /* -----------------------------------------------------------------------
+     LEGACY ALIASES (kept for inline styles & older module CSS)
+     ----------------------------------------------------------------------- */
+  --color-primary-base: 224 88% 60%;
+  --color-accent-base: 45 100% 56%;
+  --color-text-main: var(--navy-900);
+  --color-text-muted: var(--text-muted);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-primary-400: var(--primary-400);
+  --color-accent-400: var(--accent-400);
+  --color-success-400: #34D399;
+  --color-bg-hover: var(--bg-hover);
+}
+
+/* ==========================================================================
+   DARK MODE — [data-theme="dark"] token overrides
+   Light surfaces flip to deep ink; accents brighten for contrast.
+   ========================================================================== */
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Surfaces — deep ink elevations */
+  --bg-page:     #0B1120;
+  --bg-card:     #131C30;
+  --bg-hover:    #1A2440;
+  --bg-elevated: #182238;
+
+  /* Text — light on dark */
+  --text-primary:   #F1F5F9;
+  --text-secondary: #AEB9CC;
+  --text-muted:     #8491AB;
+  --text-inverse:   #FFFFFF;
+
+  /* Borders — subtle light hairlines */
+  --border-subtle:  #1E2A44;
+  --border-default: #2A3A5C;
+  --border-strong:  #3B4D75;
+
+  /* Navy scale — keep darks for deep sections, lift light ends */
+  --navy-50:  #0F1830;
+  --navy-100: #182238;
+  --navy-200: #243352;
+  --navy-300: #33466E;
+  --navy-400: #4A5F8A;
+  --navy-500: #5F76A3;
+  --navy-600: #7C92BC;
+  --navy-700: #A3B4D4;
+
+  /* Primary — brighten mid-tones for chips & links on dark */
+  --primary-50:  #16213A;
+  --primary-100: #1E2B52;
+  --primary-200: #2A3D75;
+  --primary-300: #3B5CA8;
+  --primary-400: #5F8BFF;
+  --primary-500: #7AA0FF;
+  --primary-600: #93B4FF;
+  --primary-700: #A9C4FF;
+  --primary-800: #C0D4FF;
+  --primary-900: #DCE7FF;
+  --primary-950: #EEF4FF;
+
+  /* Accent — brighten 600/700 so overlines stay legible on dark */
+  --accent-600: #FFD454;
+  --accent-700: #FFC81E;
+
+  /* Shadows — deeper, darker */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 4px -1px rgba(0, 0, 0, 0.45), 0 8px 16px -6px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 4px 8px -2px rgba(0, 0, 0, 0.5), 0 16px 32px -12px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 8px 16px -4px rgba(0, 0, 0, 0.55), 0 32px 64px -16px rgba(0, 0, 0, 0.6);
+  --shadow-2xl: 0 16px 32px -8px rgba(0, 0, 0, 0.6), 0 48px 96px -24px rgba(0, 0, 0, 0.65);
+
+  /* Semantic solid button — yellow so CTAs pop on ink */
+  --btn-ink-bg: var(--accent-400);
+  --btn-ink-color: var(--navy-950);
+  --btn-ink-hover-bg: var(--accent-300);
+  --btn-ink-hover-color: var(--navy-950);
+
+  /* Legacy aliases follow the flipped tokens */
+  --color-text-main: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-bg-hover: var(--bg-hover);
 }

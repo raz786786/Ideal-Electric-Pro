@@ -38,7 +38,7 @@ export default function Footer() {
           {/* ---- Column 1: Brand ---- */}
           <div className={styles.brand}>
             <div className={styles.brandName}>
-              <span aria-hidden="true" style={{ display: 'inline-flex', alignItems: 'center' }}>
+              <span className={styles.brandMark} aria-hidden="true" style={{ display: 'inline-flex', alignItems: 'center' }}>
                 <Zap size={20} fill="currentColor" />
               </span>
               Ideal Electric Pros&nbsp;<span>Inc</span>

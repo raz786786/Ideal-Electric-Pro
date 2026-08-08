@@ -1,4 +1,4 @@
-import { ShieldCheck, Clock, DollarSign, Zap, CheckCircle2, Award, Star } from 'lucide-react';
+import { ShieldCheck, Clock, DollarSign, Zap, CheckCircle2, Award } from 'lucide-react';
 import AnimatedSection from '@/components/shared/AnimatedSection/AnimatedSection';
 import styles from './WhyChooseUs.module.css';
 

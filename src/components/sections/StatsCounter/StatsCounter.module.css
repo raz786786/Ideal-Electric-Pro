@@ -1,9 +1,22 @@
 .section {
-  padding: clamp(5rem, 10vw, 8rem) 0;
-  background: var(--navy-900);
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+  background: var(--bg-darkest);
   color: var(--text-inverse);
   position: relative;
   overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70vw;
+  height: 40vw;
+  background: radial-gradient(ellipse, rgba(255, 200, 30, 0.07) 0%, transparent 60%);
+  filter: blur(80px);
+  pointer-events: none;
 }
 
 .container {
@@ -17,50 +30,76 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .stat {
-  padding: 2rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
-  background: var(--navy-800);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-xl);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.3s var(--ease-out-expo);
+}
+
+.stat:last-child {
+  border-right: none;
 }
 
 .stat:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-500);
+  background: rgba(255, 200, 30, 0.05);
 }
 
 .statNumber {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 800;
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: 600;
   color: var(--accent-400);
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
+  line-height: 1;
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
 }
 
 .statLabel {
   font-family: var(--font-body);
-  font-size: 1.125rem;
-  color: var(--primary-50);
-  font-weight: 600;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.14em;
 }
 
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .stat:nth-child(2n) {
+    border-right: none;
+  }
+
+  .stat:nth-child(n + 3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
 }
 
 @media (max-width: 639px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+  }
+
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .stat:last-child {
+    border-bottom: none;
+  }
+
+  .stat:nth-child(n + 3) {
+    border-top: none;
   }
 }

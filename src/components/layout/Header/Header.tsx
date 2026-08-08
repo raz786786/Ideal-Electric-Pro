@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Zap, Phone } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 import { navigation } from '@/data/navigation';
+import ThemeToggle from '@/components/ui/ThemeToggle/ThemeToggle';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -91,6 +92,9 @@ export default function Header() {
           {siteConfig.phone}
         </Link>
 
+        {/* ---- Theme Toggle (visible on all breakpoints) ---- */}
+        <ThemeToggle />
+
         {/* ---- Mobile Hamburger Toggle ---- */}
         <button
           type="button"
@@ -113,13 +117,14 @@ export default function Header() {
         className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}
         aria-label="Mobile navigation"
       >
-        {navigation.map((item) => (
+        {navigation.map((item, index) => (
           <Link
             key={item.href}
             href={item.href}
             id={`mobile-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
             className={`${styles.mobileNavLink} ${isActive(item.href) ? styles.mobileNavLinkActive : ''}`}
             onClick={closeMobileMenu}
+            style={{ '--i': index } as React.CSSProperties}
           >
             {item.label}
           </Link>

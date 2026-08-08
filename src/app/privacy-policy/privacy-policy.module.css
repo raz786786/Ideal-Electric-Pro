@@ -1,5 +1,5 @@
 .wrapper {
-  padding: clamp(3rem, 5vw, 6rem) 0;
+  padding: calc(var(--header-height) + clamp(2rem, 5vw, 4rem)) 0 clamp(4rem, 7vw, 6rem);
 }
 
 .container {
@@ -13,45 +13,52 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: hsl(215, 10%, 52%);
-  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
 }
 
 .breadcrumbLink {
-  color: hsl(215, 12%, 72%);
+  color: var(--primary-600);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s var(--ease-out-expo);
 }
 
 .breadcrumbLink:hover {
-  color: hsl(38, 95%, 54%);
+  color: var(--accent-600);
 }
 
 .separator {
-  color: hsl(215, 8%, 38%);
+  color: var(--border-strong);
 }
 
 .current {
-  color: hsl(210, 15%, 95%);
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 .title {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 1.75rem + 1vw, 2.75rem);
-  font-weight: 800;
-  color: hsl(210, 15%, 95%);
+  font-weight: 600;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
+  letter-spacing: -0.03em;
 }
 
 .updated {
   font-size: 0.875rem;
-  color: hsl(215, 10%, 52%);
+  color: var(--text-muted);
   margin-bottom: 2.5rem;
 }
 
 .content {
-  color: hsl(215, 12%, 72%);
-  line-height: 1.7;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  box-shadow: var(--shadow-sm);
 }
 
 .content p {
@@ -61,9 +68,10 @@
 .content h2 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 700;
-  color: hsl(210, 15%, 95%);
+  font-weight: 600;
+  color: var(--text-primary);
   margin: 2.5rem 0 1rem;
+  letter-spacing: -0.02em;
 }
 
 .content ul {
@@ -76,9 +84,9 @@
 }
 
 .addressBlock {
-  background: hsl(220, 22%, 14%);
-  border: 1px solid hsla(215, 20%, 40%, 0.15);
-  border-radius: 12px;
+  background: var(--navy-50);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
   padding: 1.5rem;
   margin-top: 1.5rem;
   display: inline-block;

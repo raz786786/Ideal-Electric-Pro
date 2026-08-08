@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { 
   Zap, 
   Building2, 
-  Sliders, 
   Plug, 
   Lightbulb, 
   Car, 
@@ -10,6 +9,7 @@ import {
   BatteryCharging, 
   ShieldCheck, 
   AlertTriangle,
+  Home,
   ArrowRight
 } from 'lucide-react';
 import { services } from '@/data/services';
@@ -17,16 +17,16 @@ import AnimatedSection from '@/components/shared/AnimatedSection/AnimatedSection
 import styles from './ServicesGrid.module.css';
 
 const iconMap: Record<string, React.ComponentType<any>> = {
-  'Zap': Zap,
-  'Building2': Building2,
-  'Gauge': Sliders,
-  'Cable': Plug,
-  'Lightbulb': Lightbulb,
-  'Car': Car,
-  'Smartphone': Smartphone,
-  'Power': BatteryCharging,
-  'Shield': ShieldCheck,
-  'AlertTriangle': AlertTriangle,
+  'home': Home,
+  'building-2': Building2,
+  'zap': Zap,
+  'cable': Plug,
+  'lightbulb': Lightbulb,
+  'car': Car,
+  'smartphone': Smartphone,
+  'battery-charging': BatteryCharging,
+  'shield': ShieldCheck,
+  'alert-triangle': AlertTriangle,
 };
 
 interface ServicesGridProps {

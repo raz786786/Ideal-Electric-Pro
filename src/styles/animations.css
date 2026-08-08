@@ -58,7 +58,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.92);
   }
   to {
     opacity: 1;
@@ -78,32 +78,42 @@
 }
 
 /* -----------------------------------------------------------------------
-   KEYFRAMES — Pulsing effects
+   KEYFRAMES — Electric pulse (safety yellow ring)
    ----------------------------------------------------------------------- */
-
-/* Electric pulse — box-shadow pulsing primary (red-tinted for urgency) */
 @keyframes electricPulse {
   0% {
-    box-shadow: 0 0 0 0 hsla(0, 72%, 58%, 0.6);
+    box-shadow: 0 0 0 0 rgba(255, 200, 30, 0.55);
   }
   50% {
-    box-shadow: 0 0 0 12px hsla(0, 72%, 58%, 0);
+    box-shadow: 0 0 0 12px rgba(255, 200, 30, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 hsla(0, 72%, 58%, 0);
+    box-shadow: 0 0 0 0 rgba(255, 200, 30, 0);
   }
 }
 
-/* Phone pulse — green ring expanding outward */
+/* Phone pulse — yellow ring expanding outward */
 @keyframes phonePulse {
   0% {
-    box-shadow: 0 0 0 0 hsla(152, 69%, 48%, 0.5);
+    box-shadow: 0 0 0 0 rgba(255, 200, 30, 0.5);
   }
   50% {
-    box-shadow: 0 0 0 14px hsla(152, 69%, 48%, 0);
+    box-shadow: 0 0 0 14px rgba(255, 200, 30, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 hsla(152, 69%, 48%, 0);
+    box-shadow: 0 0 0 0 rgba(255, 200, 30, 0);
+  }
+}
+
+/* -----------------------------------------------------------------------
+   KEYFRAMES — Marquee ticker
+   ----------------------------------------------------------------------- */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -140,7 +150,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
   }
 }
 
@@ -154,10 +164,20 @@
   }
 }
 
+/* Glow pulse — soft accent breathing */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
 /* -----------------------------------------------------------------------
    UTILITY ANIMATION CLASSES
-   All classes start with opacity: 0 so JS can trigger them via
-   adding the class or toggling data-attributes.
    ----------------------------------------------------------------------- */
 
 .animate-fade-in-up {
@@ -210,6 +230,15 @@
   animation: gradientBorder 4s ease infinite;
 }
 
+.animate-glow-pulse {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* Marquee — duplicate content twice, translate -50% for seamless loop */
+.animate-marquee {
+  animation: marquee 36s linear infinite;
+}
+
 /* -----------------------------------------------------------------------
    ANIMATION DELAYS — for staggering groups of animated elements
    ----------------------------------------------------------------------- */
@@ -222,3 +251,18 @@
 .delay-600 { animation-delay: 600ms; }
 .delay-700 { animation-delay: 700ms; }
 .delay-800 { animation-delay: 800ms; }
+
+/* -----------------------------------------------------------------------
+   REDUCED MOTION — respect user preference
+   ----------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-float,
+  .animate-glow-pulse,
+  .animate-electric-pulse,
+  .animate-phone-pulse,
+  .animate-shimmer,
+  .animate-gradient-border {
+    animation: none !important;
+  }
+}

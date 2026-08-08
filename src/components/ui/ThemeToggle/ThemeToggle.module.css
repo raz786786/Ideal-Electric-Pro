@@ -1,0 +1,36 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-out-expo),
+              background-color 0.25s var(--ease-out-expo),
+              border-color 0.25s var(--ease-out-expo),
+              color 0.25s var(--ease-out-expo);
+  flex-shrink: 0;
+}
+
+.toggle:hover {
+  background: var(--accent-400);
+  border-color: var(--accent-400);
+  color: var(--navy-950);
+  transform: translateY(-2px);
+}
+
+.toggle:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Inside the mobile menu overlay it inherits the white color scheme */
+@media (max-width: 1023px) {
+  .toggle {
+    width: 38px;
+    height: 38px;
+  }
+}

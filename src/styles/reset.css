@@ -130,7 +130,7 @@ dialog {
 
 /* Focus styles — accessible keyboard focus indicators */
 :focus-visible {
-  outline: 2px solid var(--primary-400, hsl(217, 91%, 56%));
+  outline: 2px solid var(--primary-500, hsl(224, 91%, 56%));
   outline-offset: 2px;
 }
 
